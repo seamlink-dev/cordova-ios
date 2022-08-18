@@ -47,8 +47,8 @@ describe('build', () => {
                 '-archivePath',
                 'TestProjectName.xcarchive',
                 'archive',
-                `CONFIGURATION_BUILD_DIR=${path.join(testProjectPath, 'build', 'device')}`,
-                `SHARED_PRECOMPS_DIR=${path.join(testProjectPath, 'build', 'sharedpch')}`
+                '',
+                'SHARED_PRECOMPS_DIR=' + path.join(testProjectPath, 'build', 'sharedpch')
             ]);
             expect(args.length).toEqual(13);
         });
@@ -99,8 +99,8 @@ describe('build', () => {
                 '-archivePath',
                 'TestProjectName.xcarchive',
                 'archive',
-                `CONFIGURATION_BUILD_DIR=${path.join(testProjectPath, 'build', 'device')}`,
-                `SHARED_PRECOMPS_DIR=${path.join(testProjectPath, 'build', 'sharedpch')}`
+                '',
+                'SHARED_PRECOMPS_DIR=' + path.join(testProjectPath, 'build', 'sharedpch')
             ]);
             expect(args.length).toEqual(13);
         });
@@ -120,8 +120,8 @@ describe('build', () => {
                 '-destination',
                 'platform=iOS Simulator,name=iPhone 5s',
                 'build',
-                `CONFIGURATION_BUILD_DIR=${path.join(testProjectPath, 'build', 'emulator')}`,
-                `SHARED_PRECOMPS_DIR=${path.join(testProjectPath, 'build', 'sharedpch')}`
+                '',
+                'SHARED_PRECOMPS_DIR=' + path.join(testProjectPath, 'build', 'sharedpch')
             ]);
             expect(args.length).toEqual(13);
         });
@@ -143,8 +143,8 @@ describe('build', () => {
                 '-archivePath',
                 'TestProjectName.xcarchive',
                 'archive',
-                `CONFIGURATION_BUILD_DIR=${path.join(testProjectPath, 'build', 'device')}`,
-                `SHARED_PRECOMPS_DIR=${path.join(testProjectPath, 'build', 'sharedpch')}`,
+                '',
+                'SHARED_PRECOMPS_DIR=' + path.join(testProjectPath, 'build', 'sharedpch'),
                 '-sdk',
                 'TestSdkFlag'
             ]);
@@ -168,8 +168,8 @@ describe('build', () => {
                 '-destination',
                 'platform=iOS Simulator,name=iPhone 5s',
                 'build',
-                `CONFIGURATION_BUILD_DIR=${path.join(testProjectPath, 'build', 'emulator')}`,
-                `SHARED_PRECOMPS_DIR=${path.join(testProjectPath, 'build', 'sharedpch')}`,
+                '',
+                'SHARED_PRECOMPS_DIR=' + path.join(testProjectPath, 'build', 'sharedpch'),
                 '-archivePath',
                 'TestArchivePathFlag'
             ]);
@@ -192,8 +192,8 @@ describe('build', () => {
                 'TestProjectName.xcarchive',
                 '-allowProvisioningUpdates',
                 'archive',
-                `CONFIGURATION_BUILD_DIR=${path.join(testProjectPath, 'build', 'device')}`,
-                `SHARED_PRECOMPS_DIR=${path.join(testProjectPath, 'build', 'sharedpch')}`
+                '',
+                'SHARED_PRECOMPS_DIR=' + path.join(testProjectPath, 'build', 'sharedpch')
             ]);
             expect(args.length).toEqual(14);
         });
